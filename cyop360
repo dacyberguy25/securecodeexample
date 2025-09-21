@@ -1,0 +1,47 @@
+def main():
+    #into quotation
+    print("Welcome to the python voter registration application.")
+#input for users name
+item = input("What is your first name? ")
+item1 = input("What is your last name? ")
+#input for users age
+item2 = int(input("What is your age? "))
+if item2 < 18 :
+    print("You need to be 18 or above to vote")
+    exit()
+#input for citizenship verification
+print ("Are you a U.S. citizen? Reply 'Yes' or 'No'")
+item3 = input()
+if item3 != "Yes" :
+        print("You need to be a U.S. citizen to register to vote")
+        exit()
+else:
+    item3 = "Yes"
+#states data set
+stateList = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+             'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+             'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+             'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+             'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+#input for state
+item4 = input("What state do you live in? Abbreviate state name with caps (ex: MD). ")
+while item4 not in stateList:
+    print("Invalid state abbreviation. Please try again.")
+    item4 = input("State: ")
+#input for zipcode
+item5 = input("What is your zipcode? ")
+while not (item5.isdigit() and len(item5) == 5):
+    print("Zipcode must be a 5-digit number.")
+    item5 = input("Zipcode: ")
+#summary of information
+print ("Thanks for registering to vote. Here is the information we recieved:")
+print(f"Name: {item} {item1} ")
+print(f"Age: {item2}")
+print(f"U.S. Citizen: {item3}")
+print(f"State: {item4}")
+print(f"Zipcode: {item5}")
+print("Thanks for trying the Voter Registration Application. Your voter "
+      "registration card should be shipped within 3 weeks.")
+
+if __name__ == "__main__":
+    main()
