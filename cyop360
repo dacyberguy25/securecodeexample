@@ -1,3 +1,4 @@
+#sonar scan
 def main():
     #into quotation
     print("Welcome to the python voter registration application.")
