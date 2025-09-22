@@ -1,4 +1,4 @@
-# Triggering SonarCloud scan
+# Triggering SonarCloud scan with config file
 def main():
     #into quotation
     print("Welcome to the python voter registration application.")
